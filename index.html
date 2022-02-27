@@ -1,79 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <!--googlefonts-->
-  <link href=".\css folder\googlefont-rubik.css" rel="stylesheet" > 
- 
-  <!--custom css-->
- <link rel="stylesheet" href="at.css">
-  <!--leaflet-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<title>Frontend Mentor | IP Address Tracker</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<h1>IP Address Tracker</h1>
+			<section class="header__input">
+				<input type="text" placeholder="Search for any IP address or domain" id="input" />
+				<button id="submit"></button>
+			</section>
+			<span id="error">Please enter correct ip adress or domain</span>
+		</header>
 
-   <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
- integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
- crossorigin=""></script>
+		<main class="info">
+			<section class="info__container">
+				<h3 class="info__title">IP Address</h3>
+				<p class="info__content" id="ip-result"></p>
+			</section>
+			<section class="info__container">
+				<h3 class="info__title">Location</h3>
+				<p class="info__content" id="location-result"></p>
+			</section>
+			<section class="info__container">
+				<h3 class="info__title">Timezone</h3>
+				<p class="info__content" id="timezone-result">UTC -</p>
+			</section>
+			<section class="info__container">
+				<h3 class="info__title">ISP</h3>
+				<p class="info__content" id="isp-result"></p>
+			</section>
+		</main>
 
- <title>Frontend Mentor | IP Address Tracker</title>
+		<section class="map">
+			<div id="mapid"></div>
+		</section>
 
- <!--jquery file-->
- <link href=".\JS\jquery-3.6.0.js">
-  
-</head>
-<body>
-  <div class="wrapper">
-    <div class="container">
-     
-        <h1>IP Address Tracker</h1>
-       
-            <div class="round">
-          <input 
-          type="text" 
-          placeholder="Search for any IP address or domain"
-         title="search-input" class="input-field" id="input"/>
-          <button  class="submit-button" id="btn">
-          <img src=".\images\icon-arrow.svg" alt="arrow" />
-          </button>
-          </div>
-        
-     
-      <div class="center-content">
-        <div class="center">
-         <div class="parts">
-            <h4>IP Address</h4>
-            <p class="one"></p>
-          </div>
-          <div class="parts">
-            <h4>Location</h4>
-            <p class="two"> </p>
-          </div>
-          <div class="parts">
-           <h4>Timezone</h4>
-           <p class="three"></p>
-          </div>
-        
-          <div class="parts">
-            <h4>ISP</h4>
-            <p class="four"></p>
-          </div>
-        </div>
-     </div>
-    </div>
-      </div> 
-       <div id="weathermap" class="map"></div>
-       <script src="api.js"></script>
-       <!---
-       <div class="attribution">
-       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-       Frontend Mentor</a>. 
-       Coded by <a href="#">
-       RizwanaRay</a>.
-       </div>
-       -->
-</body>
+		<footer class="attribution">
+			Coded by <a href="https://github.com/rizwanaray" target="_blank">Rizwana</a>.
+		</footer>
+
+		<script type="text/javascript" src="./assets/js/secret.js"></script>
+		<script src="./assets/js/script.js" type="module"></script>
+	</body>
 </html>
