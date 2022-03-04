@@ -12,4 +12,4 @@ Users are able to:
 - See hover states for all interactive elements on the page
 - Search for any IP addresses or domains and see the key information and location
 
-### Developer: [Ashiq Fury](https://github.com/ashiqfury)
+### Developer: [Rizwana](https://github.com/RizwanaRay)
